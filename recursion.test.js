@@ -26,15 +26,15 @@ describe("longest", function() {
   });
 });
 
-// describe("everyOther", function() {
-//   it("returns a string with every other character in the input", function() {
-//     expect(everyOther("hello")).toBe("hlo");
-//     expect(everyOther("banana stand")).toBe("bnn tn");
-//     expect(everyOther("ddoouubbllee")).toBe("double");
-//     expect(everyOther("hi")).toBe("h");
-//     expect(everyOther("z")).toBe("z");
-//   });
-// });
+describe("everyOther", function() {
+  it("returns a string with every other character in the input", function() {
+    expect(everyOther("hello")).toBe("hlo");
+    expect(everyOther("banana stand")).toBe("bnn tn");
+    expect(everyOther("ddoouubbllee")).toBe("double");
+    expect(everyOther("hi")).toBe("h");
+    expect(everyOther("z")).toBe("z");
+  });
+});
 
 // describe("isPalindrome", function() {
 //   it("returns true if the string is a palindrome", function() {
