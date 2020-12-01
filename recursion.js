@@ -33,9 +33,16 @@ function everyOther(str, short=[], i=0) {
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
 
-function isPalindrome(str) {
-
-}
+function isPalindrome(str, reverse=[], i=str.length - 1) {
+  if (i < 0) {
+    if (reverse.join("") === str){
+      return true
+    }
+    return false
+  }
+  reverse.push(str[i]);
+  return isPalindrome(str, reverse, i - 1)
+  }
 
 /** findIndex: return the index of val in arr (or -1 if val is not present). */
 
@@ -62,14 +69,29 @@ function revString(str, reverse=[], i=str.length - 1) {
 /** gatherStrings: given an object, return an array of all of the string values. */
 
 function gatherStrings(obj) {
-
+  let stringArr = [];
+  for (let key in obj) {
+    if (typeof obj[key] === "string") stringArr.push(obj[key]);
+    if (typeof obj[key] === "object") stringArr.push(...gatherStrings(obj[key]));
+  }
+  return stringArr;
 }
 
 /** binarySearch: given a sorted array of numbers, and a value,
  * return the index of that value (or -1 if val is not present). */
 
-function binarySearch(arr, val) {
-
+function binarySearch(arr, val, left = 0, right = arr.length) {
+  if (left > right) {
+    return -1;
+  }
+  let middle = Math.floor((right + left) / 2);
+  if (arr[middle] === val) {
+    return middle;
+  }
+  if (arr[middle] > val) {
+    return binarySearch(arr, val, left, middle - 1);
+  }
+  return binarySearch(arr, val, middle + 1, right);
 }
 
 module.exports = {

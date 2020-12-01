@@ -36,21 +36,21 @@ describe("everyOther", function() {
   });
 });
 
-// describe("isPalindrome", function() {
-//   it("returns true if the string is a palindrome", function() {
-//     console.log(isPalindrome("tacocat"))
-//     expect(isPalindrome("tacocat")).toBe(true);
-//     expect(isPalindrome("racecar")).toBe(true);
-//     expect(isPalindrome("a")).toBe(true);
-//     expect(isPalindrome("helloolleh")).toBe(true);
-//   });
+describe("isPalindrome", function() {
+  it("returns true if the string is a palindrome", function() {
+    console.log(isPalindrome("tacocat"))
+    expect(isPalindrome("tacocat")).toBe(true);
+    expect(isPalindrome("racecar")).toBe(true);
+    expect(isPalindrome("a")).toBe(true);
+    expect(isPalindrome("helloolleh")).toBe(true);
+  });
 
-//   it("returns false if the string is not a palindrome", function() {
-//     expect(isPalindrome("tacodog")).toBe(false);
-//     expect(isPalindrome("az")).toBe(false);
-//     expect(isPalindrome("goodbye")).toBe(false);
-//   });
-// });
+  it("returns false if the string is not a palindrome", function() {
+    expect(isPalindrome("tacodog")).toBe(false);
+    expect(isPalindrome("az")).toBe(false);
+    expect(isPalindrome("goodbye")).toBe(false);
+  });
+});
 
 describe("findIndex", function() {
   let animals = ["duck", "cat", "pony", "cat"];
@@ -76,50 +76,50 @@ describe("revString", function() {
   });
 });
 
-// describe("gatherStrings", function() {
-//   it("gathers all object string values into an array", function() {
-//     let whiskey = {
-//       name: "Whiskey",
-//       age: 5,
-//       favFood: "popcorn",
-//       color: "black",
-//       barks: false
-//     };
-//     expect(gatherStrings(whiskey).sort()).toEqual(["Whiskey", "popcorn", "black"].sort());
-//   });
+describe("gatherStrings", function() {
+  it("gathers all object string values into an array", function() {
+    let whiskey = {
+      name: "Whiskey",
+      age: 5,
+      favFood: "popcorn",
+      color: "black",
+      barks: false
+    };
+    expect(gatherStrings(whiskey).sort()).toEqual(["Whiskey", "popcorn", "black"].sort());
+  });
 
-//   it("handles nested objects", function() {
-//     let nestedObj = {
-//       firstName: "Lester",
-//       favoriteNumber: 22,
-//       moreData: {
-//         lastName: "Testowitz"
-//       },
-//       funFacts: {
-//         moreStuff: {
-//           anotherNumber: 100,
-//           deeplyNestedString: {
-//             almostThere: {
-//               success: "you made it!"
-//             }
-//           }
-//         },
-//         favoriteString: "nice!"
-//       }
-//     };
-//     expect(gatherStrings(nestedObj).sort()).toEqual(["Lester", "Testowitz", "you made it!", "nice!"].sort());
-//   });
-// });
+  it("handles nested objects", function() {
+    let nestedObj = {
+      firstName: "Lester",
+      favoriteNumber: 22,
+      moreData: {
+        lastName: "Testowitz"
+      },
+      funFacts: {
+        moreStuff: {
+          anotherNumber: 100,
+          deeplyNestedString: {
+            almostThere: {
+              success: "you made it!"
+            }
+          }
+        },
+        favoriteString: "nice!"
+      }
+    };
+    expect(gatherStrings(nestedObj).sort()).toEqual(["Lester", "Testowitz", "you made it!", "nice!"].sort());
+  });
+});
 
-// describe("binarySearch", function () {
-//   it("should find the index of a value in a sorted array", function() {
-//     expect(binarySearch([1, 2, 3, 4], 4)).toEqual(3);
-//     expect(binarySearch([1, 2], 1)).toEqual(0);
-//     expect(binarySearch([1, 2, 3, 4, 5, 6, 7], 6)).toEqual(5);
-//   });
+describe("binarySearch", function () {
+  it("should find the index of a value in a sorted array", function() {
+    expect(binarySearch([1, 2, 3, 4], 4)).toEqual(3);
+    expect(binarySearch([1, 2], 1)).toEqual(0);
+    expect(binarySearch([1, 2, 3, 4, 5, 6, 7], 6)).toEqual(5);
+  });
 
-//   it("should return -1 if the value is not found", function() {
-//     expect(binarySearch([1, 2, 3, 4], 0)).toEqual(-1);
-//     expect(binarySearch([1, 2], 11)).toEqual(-1);
-//   });
-// });
+  it("should return -1 if the value is not found", function() {
+    expect(binarySearch([1, 2, 3, 4], 0)).toEqual(-1);
+    expect(binarySearch([1, 2], 11)).toEqual(-1);
+  });
+});
